@@ -7,13 +7,13 @@ The paper link is https://arxiv.org/pdf/2203.04419.pdf
 
 ## Prerequisites
 * NVIDIA GPU + CUDA + cuDNN + python + pytorch
-We used python >= 3.6, CUDA 11.4, pytorch >= 1.7.0 
+* We used python >= 3.6, CUDA 11.4, pytorch >= 1.7.0 
 
 ## Usage
 Unimodal embeddings and data splits have been provided
 run python main.py to rebuild the multimodal data results  
 
-
+## 
 If you use this code, please cite our work, the reference is
 ```
 @article{cui2022survival,

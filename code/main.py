@@ -80,5 +80,4 @@ if opt.task == 'surv':
     All_results = results_selectedViews.append(results_allviews, ignore_index=True)
     print(All_results['C-Index'])
     print('********************')
-    All_results.to_csv(os.path.join(opt.checkpoints_dir, opt.exp_name, opt.model_name, 'SurvPred_Eval.csv'), index=False)
     print(All_results['C-Index'])

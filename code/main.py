@@ -18,21 +18,8 @@ torch.backends.cudnn.deterministic=True
 torch.backends.cudnn.benchmark = False
 
 opt = parse_args()
-if opt.exp_num < 0:
-    exp_number = 159
-else:
-    exp_number = opt.exp_num
 fold_range=[i+1 for i in range(15)] # Use 15 train-val-test splits
-'''
-if exp_number == 159:
-    print('noFast-allviews')
-    opt.required_modality = ['demo', 'path', 'rad', 'omic']
-    #opt.init_type = 'max'
-    opt.random_drop_views = True
-    opt.use_embedding = True
-    opt.recon = True
-    opt.recon_loss_weight = 1
-'''
+
 device = torch.device('cuda:{}'.format(opt.gpu_ids[0])) if opt.gpu_ids else torch.device('cpu')
 if not os.path.exists(opt.checkpoints_dir): os.makedirs(opt.checkpoints_dir)
 if not os.path.exists(os.path.join(opt.checkpoints_dir, opt.exp_name)): os.makedirs(
@@ -45,10 +32,10 @@ if not os.path.exists(os.path.join(opt.checkpoints_dir, opt.exp_name, opt.model_
 opt.rad_dir = os.path.join(opt.dataroot, 'radiology')
 if opt.task == 'surv':
     if opt.use_embedding == True:
-        data_cv_path = os.path.join(opt.dataroot, 'gbmlgg15cv_embedding3.pkl')
-        test_data_cv_path = os.path.join(opt.dataroot, 'gbmlgg15cv_patches_embedding3.pkl')
-data_cv_mask_path = os.path.join(opt.dataroot, 'mask_gbmlgg15cv3.pkl')
-test_data_cv_mask_path = os.path.join(opt.dataroot, 'mask_gbmlgg15cv_patches3.pkl')
+        data_cv_path = os.path.join(opt.dataroot, 'gbmlgg15cv_embedding.pkl')
+        test_data_cv_path = os.path.join(opt.dataroot, 'gbmlgg15cv_patches_embedding.pkl')
+data_cv_mask_path = os.path.join(opt.dataroot, 'mask_gbmlgg15cv.pkl')
+test_data_cv_mask_path = os.path.join(opt.dataroot, 'mask_gbmlgg15cv_patches.pkl')
 data_cv = pickle.load(open(data_cv_path, 'rb'))
 data_cv_mask = pickle.load(open(data_cv_mask_path, 'rb'))
 results = []

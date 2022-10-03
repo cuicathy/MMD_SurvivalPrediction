@@ -79,5 +79,3 @@ if opt.task == 'surv':
     _, results_allviews = evaluate_completeModa(model3 = model, fold_range=fold_range)
     All_results = results_selectedViews.append(results_allviews, ignore_index=True)
     print(All_results['C-Index'])
-    print('********************')
-    print(All_results['C-Index'])

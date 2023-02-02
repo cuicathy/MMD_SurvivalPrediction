@@ -10,7 +10,7 @@ The paper link is https://arxiv.org/pdf/2203.04419.pdf
 * We used python >= 3.6, CUDA 11.4, pytorch >= 1.7.0 
 
 ## Usage
-* Unimodal embeddings and data splits have been provided https://drive.google.com/file/d/1MgWYxE7eCjxQ9HUQBmsBzIV-iZWhtYL7/view?usp=sharing
+* Unimodal embeddings and data splits have been provided https://drive.google.com/drive/folders/1dsG7Ab4dNG7IdRZEax6ABIVCC2J8x-w8?usp=share_link
 * Run python main.py to do the multimodal survival prediction   
 
 ## 

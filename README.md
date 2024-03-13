@@ -13,7 +13,7 @@ The paper link is https://arxiv.org/pdf/2203.04419.pdf
 * Unimodal embeddings and data splits have been provided https://drive.google.com/drive/folders/1dsG7Ab4dNG7IdRZEax6ABIVCC2J8x-w8?usp=share_link
 * Run python main.py to do the multimodal survival prediction   
 * Key component of the radiomics feature extraction has been uploaded (Radiomics.py, 2DRadiomics_params.py)
-* 
+  
 ## 
 If you use this code, please cite our work, the reference is
 ```

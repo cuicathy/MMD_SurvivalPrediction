@@ -25,7 +25,6 @@ setting:
   # normalization.
   normalize: true #false #true
   #normalizeScale: 100  # This allows you to use more or less the same bin width.
-  force2D: true
   binWidth: 5
   #binCount: 5
   label: 1
